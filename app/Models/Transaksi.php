@@ -9,7 +9,7 @@ class Transaksi extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['pembeli_id', 'barang_id', 'jumlah', 'total', 'created_at', 'updated_at'];
+    protected $fillable = ['pembeli_id', 'barang_id', 'jumlah', 'total', 'snap_token', 'status', 'created_at', 'updated_at'];
 
     public function barang()
     {

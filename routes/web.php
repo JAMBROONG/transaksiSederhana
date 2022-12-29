@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\MidtransController;
 use App\Http\Controllers\PembeliController;
 use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,5 @@ Route::get('/pembeli', [PembeliController::class, 'index'])->name('pembeli');
 Route::get('/tansaksi', [TransaksiController::class, 'index'])->name('transaksi');
 Route::get('/tansaksi/add', [TransaksiController::class, 'add'])->name('addTransaksi');
 Route::post('/tansaksi', [TransaksiController::class, 'store'])->name('storeTransaksi');
+Route::post('/tansaksi/createpayment', [TransaksiController::class, 'payment'])->name('transaksi.createpayment');
+Route::get('/midtrans', [MidtransController::class, 'index']);
